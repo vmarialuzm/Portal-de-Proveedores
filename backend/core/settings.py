@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     "corsheaders",
     'proveedores',
+    'solicitud_compra'
 ]
 
 MIDDLEWARE = [
