@@ -3,6 +3,9 @@ from proveedores.models import Proveedores
 
 class SolicitudCompra(models.Model):
     proveedor = models.ForeignKey(Proveedores, on_delete=models.CASCADE)
+
+class DetalleSolicitudCompra(models.Model):
+    solicitud_compra = models.ForeignKey(SolicitudCompra, on_delete=models.CASCADE)
     producto = models.CharField(max_length=100)
     enlace_producto = models.URLField()
     cantidad = models.IntegerField()
